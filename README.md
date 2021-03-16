@@ -8,6 +8,6 @@ All pytests works: `285 passed, 4 skipped, 11 warnings in 11.24s`
 And it's buildable
 ```sh
     py .\setup.py bdist
-``
+```
 
 [![Upload Python Package](https://github.com/manatlan/appswag/actions/workflows/python-publish.yml/badge.svg)](https://github.com/manatlan/appswag/actions/workflows/python-publish.yml)
