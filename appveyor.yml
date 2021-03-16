@@ -17,4 +17,4 @@ install:
 build: off
 
 test_script:
-  - "python -m pytest -s -v pyswagger/tests"
+  - "python -m pytest -s -v appswag/tests"

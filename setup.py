@@ -1,6 +1,6 @@
 from setuptools import setup, find_packages
 
-version = open('pyswagger/__init__.py', 'r').readline().split()[2].strip("'")
+version = open('appswag/__init__.py', 'r').readline().split()[2].strip("'")
 
 setup(
     name = 'appswag',

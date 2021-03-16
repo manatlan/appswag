@@ -1,2 +1,2 @@
 [run]
-omit = pyswagger/tests/*
+omit = appswag/tests/*

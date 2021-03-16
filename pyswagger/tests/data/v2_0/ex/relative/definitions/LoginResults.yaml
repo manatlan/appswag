@@ -1,5 +1,0 @@
-description: test
-type: object
-properties:
-  id:
-    type: integer

@@ -1,5 +1,10 @@
 ## Changes
 
+### 0.9.0 (first version after the fork)
+
+- first release as a real clone pyswagger -> appswag
+- add .allprops on "BaseObj" to let all props be visible
+
 ### 0.8.39
 
 - Fix the issue that case insensitive keys in headers not working

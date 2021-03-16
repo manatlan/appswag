@@ -15,7 +15,7 @@ install:
     - pip install -r requirements-dev.txt
     - pip install coveralls
 script:
-    - py.test --cov=pyswagger --cov-config=.coveragerc pyswagger/tests
+    - py.test --cov=appswag --cov-config=.coveragerc appswag/tests
 after_success:
     - coveralls
 
