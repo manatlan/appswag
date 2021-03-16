@@ -2,13 +2,15 @@ language: python
 branches:
     only:
         - master
-        - develop
+#        - develop
         
 python:
     - "2.7"
     - "3.4"
     - "3.5"
     - "3.6"
+    - "3.7"
+    - "3.8"
 install:
     - pip install -r requirements-dev.txt
     - pip install coveralls
