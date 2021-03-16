@@ -1,4 +1,4 @@
-This repo is a fork of [pywagger](https://github.com/pyopenapi/pyswagger), for my own need
+This repo is a fork of [pyswagger](https://github.com/pyopenapi/pyswagger), for my own need
 
 All pytests works: `285 passed, 4 skipped, 11 warnings in 11.24s`
 
