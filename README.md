@@ -9,3 +9,5 @@ And it's buildable
     py .\setup.py bdist
 
 [![Upload Python Package](https://github.com/manatlan/appswag/actions/workflows/python-publish.yml/badge.svg)](https://github.com/manatlan/appswag/actions/workflows/python-publish.yml)
+
+[![Test](https://github.com/manatlan/appswag/actions/workflows/python-package.yml/badge.svg)](https://github.com/manatlan/appswag/actions/workflows/python-package.yml)
