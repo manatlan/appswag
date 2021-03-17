@@ -9,6 +9,9 @@ class MimeCodec:
         self.register('text/plain', PlainCodec())
         jsonCodec = JsonCodec()
         self.register('application/json', jsonCodec)
+        #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#- manatlan's add
+        self.register('application/hal+json', jsonCodec)        
+        #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
         self.register('text/json', jsonCodec)
 
     def register(self, mime, codec):
