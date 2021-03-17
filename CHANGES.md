@@ -1,5 +1,9 @@
 ## Changes
 
+### 0.9.1 
+
+- add register mime codec application/hal+json
+
 ### 0.9.0 (first version after the fork)
 
 - first release as a real clone pyswagger -> appswag
