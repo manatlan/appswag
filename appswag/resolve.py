@@ -51,7 +51,8 @@ class Resolver(object):
                 getter = self.__default_getter or UrlGetter
                 p = six.moves.urllib.parse.urlparse(local_url)
                 if p.scheme == 'file' and p.path:
-                    getter = LocalGetter(os.path.join(p.netloc, p.path))
+                    getter = LocalGetter(os.path.join(p.netloc, six.moves.urllib.parse.unquote(p.path)))
+                    
 
             if inspect.isclass(getter):
                 # default initialization is passing the url
