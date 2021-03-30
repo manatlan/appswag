@@ -1,5 +1,10 @@
 ## Changes
 
+### 0.9.2
+
+- unquote local uri path
+
+
 ### 0.9.1 
 
 - add register mime codec application/hal+json
