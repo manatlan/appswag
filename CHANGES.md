@@ -1,5 +1,9 @@
 ## Changes
 
+### 0.9.3
+
+- add register mime codec 'application/ate.error+json' (thanks @atchoum31)
+
 ### 0.9.2
 
 - unquote local uri path
