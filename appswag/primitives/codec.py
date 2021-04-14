@@ -11,6 +11,7 @@ class MimeCodec:
         self.register('application/json', jsonCodec)
         #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#- manatlan's add
         self.register('application/hal+json', jsonCodec)        
+        self.register('application/ate.error+json', jsonCodec)  
         #-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-#-
         self.register('text/json', jsonCodec)
 
