@@ -5,6 +5,12 @@ from appswag import errs
 from uuid import uuid4
 import six
 import io, codecs
+
+try:                                                 # < py3.10
+    from collections import MutableMapping
+except ImportError:                                  # >= py3.10
+    from collections.abc import MutableMapping
+
 import collections
 import logging
 
@@ -388,7 +394,7 @@ class Response(object):
              final(self.__op.responses.get('default', None)))
 
         if header != None:
-            if isinstance(header, (collections.Mapping, collections.MutableMapping)):
+            if isinstance(header, (collections.Mapping, MutableMapping)):
                 for k, v in six.iteritems(header):
                     self._convert_header(r, k, v)
             else:
