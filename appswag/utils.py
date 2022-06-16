@@ -9,6 +9,12 @@ import re
 import os
 import operator
 import functools
+
+try:                                                 # < py3.10
+    from collections import MutableMapping
+except ImportError:                                  # >= py3.10
+    from collections.abc import MutableMapping
+
 import collections
 
 #TODO: accept varg
@@ -595,8 +601,7 @@ def patch_path(base_path, path):
 
     return path
 
-
-class CaseInsensitiveDict(collections.MutableMapping):
+class CaseInsensitiveDict(MutableMapping):
     """ a case insensitive dict:
         - allow to query with case insensitive keys (get, in)
         - iteration would return original key
