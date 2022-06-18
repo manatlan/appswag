@@ -10,10 +10,10 @@ import os
 import operator
 import functools
 
-try:                                                 # < py3.10
-    from collections import MutableMapping
-except ImportError:                                  # >= py3.10
+if sys.version_info.major == 3 and sys.version_info.minor >= 10
     from collections.abc import MutableMapping
+else 
+    from collections import MutableMapping
 
 import collections
 
