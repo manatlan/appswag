@@ -3,7 +3,7 @@ from .primitives.comm import PrimJSONEncoder
 from .utils import final, deref, CaseInsensitiveDict
 from appswag import errs
 from uuid import uuid4
-import six
+import six,sys
 import io, codecs
 
 
