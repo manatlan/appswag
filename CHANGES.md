@@ -1,5 +1,10 @@
 ## Changes
 
+### 0.9.4
+
+- now, compatible with python 3.10, and unittests compliant for 3.7, 3.8, 3.9, "3.10"
+- only compat with pyyaml < 6.0 (but will be fixed soon)
+
 ### 0.9.3
 
 - add register mime codec 'application/ate.error+json' (thanks @atchoum31)
