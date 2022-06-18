@@ -8,9 +8,9 @@ import io, codecs
 
 
 if sys.version_info.major == 3 and sys.version_info.minor >= 10:
-    from collections.abc import MutableMapping
+    from collections.abc import MutableMapping, Mapping
 else:
-    from collections import MutableMapping
+    from collections import MutableMapping, Mapping
 
 import collections
 import logging
@@ -395,7 +395,7 @@ class Response(object):
              final(self.__op.responses.get('default', None)))
 
         if header != None:
-            if isinstance(header, (collections.Mapping, MutableMapping)):
+            if isinstance(header, (Mapping, MutableMapping)):
                 for k, v in six.iteritems(header):
                     self._convert_header(r, k, v)
             else:
