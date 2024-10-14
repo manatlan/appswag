@@ -2,7 +2,7 @@ from __future__ import absolute_import
 from .consts import private
 from .errs import CycleDetectionError
 import six
-import imp
+import importlib.util
 import sys
 import datetime
 import re
@@ -211,27 +211,25 @@ def from_iso8601(s):
     )
 
 def import_string(name):
-    """ import module
-    """
-    mod = fp = None
+    """ Import a module by its name. """
+    mod = None
 
-    # code below, please refer to
-    #   https://docs.python.org/2/library/imp.html
-    # for details
-    try:
+    # Vérifie si le module est déjà importé
+    if name in sys.modules:
         return sys.modules[name]
-    except KeyError:
-        pass
 
     try:
-        fp, pathname, desc = imp.find_module(name)
-        mod = imp.load_module(name, fp, pathname, desc)
+        # Trouve la spécification du module
+        spec = importlib.util.find_spec(name)
+        if spec is None:
+            return None
+        
+        # Crée un nouveau module à partir de la spécification
+        mod = importlib.util.module_from_spec(spec)
+        # Exécute le module
+        spec.loader.exec_module(mod)
     except ImportError:
         mod = None
-    finally:
-        # Since we may exit via an exception, close fp explicitly.
-        if fp:
-            fp.close()
 
     return mod
 
