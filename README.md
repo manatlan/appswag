@@ -4,6 +4,8 @@ This repo is a fork of [pyswagger](https://github.com/pyopenapi/pyswagger), for 
 
 [Available on pypi](https://pypi.org/project/appswag/#history)
 
+for py3.7 to py3.12
+
 All pytests works: `285 passed, 4 skipped, 11 warnings in 11.24s`
 
     py -m pytest .\appswag\tests
