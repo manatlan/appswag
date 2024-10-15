@@ -256,7 +256,7 @@ class SwaggerBaseTestCase(unittest.TestCase):
             ctx.parse(obj)
             ctx.__exit__(None, None, None)
         except ValueError as e:
-            self.failUnlessEqual(e.args, ('Object is not instance of ChildObj but ChildObj',))
+            self.assertEqual(e.args, ('Object is not instance of ChildObj but ChildObj',))
         else:
             self.fail('ValueError not raised')
 

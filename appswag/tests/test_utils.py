@@ -51,10 +51,10 @@ class SwaggerUtilsTestCase(unittest.TestCase):
 
 
     def test_derelativize_url(self):
-        self.assertEquals(utils.derelativise_url('https://localhost/hurf/durf.json'), 'https://localhost/hurf/durf.json')
-        self.assertEquals(utils.derelativise_url('https://localhost/hurf/./durf.json'), 'https://localhost/hurf/durf.json')
-        self.assertEquals(utils.derelativise_url('https://localhost/hurf/../durf.json'), 'https://localhost/durf.json')
-        self.assertEquals(utils.derelativise_url('https://localhost/hurf/.../durf.json'), 'https://localhost/durf.json')
+        self.assertEqual(utils.derelativise_url('https://localhost/hurf/durf.json'), 'https://localhost/hurf/durf.json')
+        self.assertEqual(utils.derelativise_url('https://localhost/hurf/./durf.json'), 'https://localhost/hurf/durf.json')
+        self.assertEqual(utils.derelativise_url('https://localhost/hurf/../durf.json'), 'https://localhost/durf.json')
+        self.assertEqual(utils.derelativise_url('https://localhost/hurf/.../durf.json'), 'https://localhost/durf.json')
     def test_scope_dict(self):
         """ ScopeDict """
         obj = {
