@@ -59,3 +59,4 @@ docs/_build/
 # Jetbrains metadata
 .idea/
 test.json
+venv/
