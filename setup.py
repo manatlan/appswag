@@ -7,6 +7,7 @@ setup(
     packages = find_packages(exclude=['*.tests.*']),
     version = version,
     description = 'A type-safe, dynamic, spec-compliant swagger client & converter for python',
+    long_description='A type-safe, dynamic, spec-compliant swagger client & converter for python',
     author = 'Mission Liao / manatlan',
     author_email = 'missionaryliao@gmail.com',
     url = 'https://github.com/manatlan/appswag', # use the URL to the github repo
